@@ -6,7 +6,7 @@
 /*   By: chduong <chduong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 17:37:08 by chduong           #+#    #+#             */
-/*   Updated: 2021/09/09 17:45:45 by chduong          ###   ########.fr       */
+/*   Updated: 2021/09/10 16:47:40 by chduong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_putnbr(int nb, t_format *fmt)
 void	ft_putunbr(unsigned int n, t_format *fmt)
 {
 	if (n > 9)
-		ft_putnbr((n / 10), fmt);
+		ft_putunbr((n / 10), fmt);
 	ft_putchar(((n % 10) + 48), fmt);
 }
 
